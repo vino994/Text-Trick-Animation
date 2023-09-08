@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+}
+h1{
+    font-size: 90px;
+    color:#333;
+    position: relative;
+}
+h1:before{
+    position: absolute;
+    content: attr(data-set);
+    width:0%;
+    white-space: nowrap;
+    color: white;
+    overflow: hidden;
+    border-right: 2px solid white;
+    animation: text 5s linear infinite;
+    filter: drop-shadow(0 0 20px #fff)drop-shadow(0 0 50px #fff);
+}
+@keyframes text {
+    0%,10%,100%{
+        width: 0;
+    }
+    70%{
+        width: 100%;
+    }
+}
